@@ -1,0 +1,21 @@
+{
+    "name": "PWA Travel Website",
+    "short_name": "PTW",
+    "description": "A Progressive Web App for Traveling to Demonstrate PWA Functionality.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+        {
+            "src": "/img/favicon.ic",
+            "sizes": "192x192",
+            "type": "img/png"
+        },
+        {
+            "src": "/img/moutains.avif",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
