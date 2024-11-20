@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Vacation Central</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="nextvacation.html">Your Next Vacation</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#" class="action-btn">Get Started</a>
+            <div class="toggle-btn">
+                <i class="small material-icons">view_headline</i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="action-btn">Get Started</a></li>
+        </div>
+    </header>
+
+    <div class="contact">
+    <div class="contact-box">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="travel-date">Travel Date</label>
+                <input type="date" id="travel-date" name="travel-date" required>
+            </div>
+            <div class="form-group">
+                <label for="travel-location">Travel Location</label>
+                <input type="text" id="travel-location" name="travel-location" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/materialize.min.js"></script>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'small material-icons'
+            : 'small material-icons'
+        }
+    </script>
+</body>
+</html>

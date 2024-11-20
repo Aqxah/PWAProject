@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="img/x-icon" href="/img/favicon.ico"/>
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="manifest" href="/manifest.json">
+
+    <script>
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/serviceworker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+
+    <title>Vacation Central</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="nextvacation.html">Your Next Vacation</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#" class="action-btn">Get Started</a>
+            <div class="toggle-btn">
+                <i class="small material-icons">view_headline</i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="action-btn">Get Started</a></li>
+        </div>
+    </header>
+
+    <main>
+        <div class="home">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit. Expedita, quaerat.</p>
+        </div>
+    </main>
+
+    <script type="module" src="/js/main.js"></script>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'small material-icons'
+            : 'small material-icons'
+        }
+    </script>
+</body>
+</html>
