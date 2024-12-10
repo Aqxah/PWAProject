@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 signInForm.style.display = 'block';
                 dropdownGetStartedBtn.textContent = 'Sign In'; // Change button text to 'Sign In'
             } else {
-                // Sign in if email/password provided
+                // Sign-in if email/password provided
                 if (email && password) {
                     try {
                         await signIn(email, password); // Sign in

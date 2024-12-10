@@ -25,7 +25,7 @@ const urlsToCache = [
     "/img/zoo.jpg"
 ];
 
-// Install Service Worker and cache resources
+// Install Service Worker and Cache resources
 self.addEventListener("install", (event) => {
     event.waitUntil(
       caches.open(CACHE_NAME).then((cache) => {

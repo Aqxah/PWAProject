@@ -40,7 +40,7 @@ export async function openDB() {
     });
 }
 
-// Add a new destination to IndexedDB, linked to user UID
+// Add a new destination to IndexedDB, linked to user UID.
 export async function addDestinationToIndexedDB(destination) {
     const user = getAuth().currentUser;  // Get the current Firebase user
     if (!user) {
