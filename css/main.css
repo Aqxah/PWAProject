@@ -326,3 +326,8 @@ button:hover {
     transform: scale(1.1); /* Slight hover effect */
     background-color: darkorange;
 }
+
+#email-input,
+#password-input {
+    color: orange;  /* Set the text color to orange for the email and password fields */
+}

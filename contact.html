@@ -22,7 +22,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="#" class="action-btn">Get Started</a>
+            <a href="#" id="getStartedBtn" class="action-btn">Get Started</a>
             <div class="toggle-btn">
                 <i class="small material-icons">view_headline</i>
             </div>
@@ -33,7 +33,7 @@
             <li><a href="destinations.html">Destinations</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#" class="action-btn">Get Started</a></li>
+            <li><a href="#" id="dropdownGetStartedBtn" class="action-btn">Get Started</a></li>
         </div>
     </header>
 
@@ -68,6 +68,11 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    </div>
+
+    <div id="signInForm" style="display: none;">
+        <input type="email" id="email-input" placeholder="Enter your email" />
+        <input type="password" id="password-input" placeholder="Enter your password" />
     </div>
 
     <script type="module" src="/js/main.js"></script>
