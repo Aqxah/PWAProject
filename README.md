@@ -8,3 +8,8 @@ IndexedDB is used for offline storage, enabling users to add, update, and delete
 
 User Authentication
 The app implements Firebase Authentication to handle user sign-ins and sign-outs. Users can create an account or sign in using their email and password. Once authenticated, data is linked to the user's Firebase account, allowing them to access and manage their destination list. When users sign out, their session is terminated, and the data is no longer accessible unless they sign in again.
+
+IMPORTANT: Use this information as the demo sign in 
+
+email: testfhsu@gmail.com
+password: TestFHSU
